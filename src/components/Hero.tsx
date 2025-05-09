@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <div className="text-white text-7xl md:text-8xl font-extrabold">
                   <img
-                    src="./dist/assets/images/logo.png"
+                    src="../dist/assets/images/logo.png"
                     alt="Logo VISTAMURAD"
                     className="mx-auto w-45 h-45 object-contain rounded-full"
                   />
