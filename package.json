@@ -1,7 +1,7 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,6 @@
     "copy-files": "cp -R node_modules/charting_library/ public"
   },
   "dependencies": {
-    "@metamask/logo": "^4.0.0",
     "lightweight-charts": "^4.2.3",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
