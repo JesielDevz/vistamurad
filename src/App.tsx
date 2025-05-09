@@ -1,5 +1,4 @@
 import React from 'react';
-/*import Metamask3DFox from './components/Metamask3DFox'*/
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ImageCarousel from './components/ImageCarousel';
