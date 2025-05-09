@@ -29,7 +29,8 @@ const Hero: React.FC = () => {
                 Buy VISTAMURAD
               </a>
               <a
-                href="#community"
+                href="https://x.com/vistamurad?t=v1DvOASEPC_9vOzXKN-GGw&s=35"
+                target="_blank"
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 border border-white/30 flex items-center justify-center gap-2 text-center"
               >
                 Join Community <ArrowRight size={16} />

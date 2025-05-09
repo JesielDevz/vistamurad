@@ -9,8 +9,8 @@ const DexScreenerEmbed = styled.div`
   }
   iframe {
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     border: 0;

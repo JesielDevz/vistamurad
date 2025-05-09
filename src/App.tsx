@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import ImageCarousel from './components/ImageCarousel';
 import Tokenomics from './components/Tokenomics';
 import HowToBuy from './components/HowToBuy';
-import VistaUsdtChart from './components/Chart';
+import Chart from './components/Chart';
 import Community from './components/Community';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -24,7 +24,7 @@ function App() {
         <ImageCarousel />
         <Tokenomics />
         <HowToBuy />
-        <VistaUsdtChart />
+        <Chart />
         <Community />
         <FAQ />
       </main>
