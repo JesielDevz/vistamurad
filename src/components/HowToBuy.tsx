@@ -27,12 +27,12 @@ const HowToBuy: React.FC = () => {
   const steps = [
     {
       title: 'Create a Wallet',
-      description: 'Download MetaMask or any other Ethereum wallet app to your phone or as a browser extension.',
+      description: 'Download MetaMask or any other BEP-20 compatible wallet app to your phone or as a browser extension.',
       icon: <Wallet className="text-white" size={32} />,
     },
     {
-      title: 'Add ETH to Your Wallet',
-      description: 'Purchase Ethereum from any major exchange and transfer it to your personal wallet.',
+      title: 'Add BNB to Your Wallet',
+      description: 'Purchase Binance Coin from any major exchange and transfer it to your personal wallet.',
       icon: <ArrowRight className="text-white" size={32} />,
     },
     {
@@ -47,8 +47,8 @@ const HowToBuy: React.FC = () => {
             className="underline text-pink-200 hover:text-white transition"
           >
             ethervista.app
-          </a>{' '}
-          and swap ETH for VISTAMURAD.
+          </a>{''}
+          , change to BSC mainnet, and swap BNB for VISTAMURAD.
         </>
       ),
       icon: <DollarSign className="text-white" size={32} />,

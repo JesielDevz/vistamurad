@@ -22,31 +22,25 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4 mt-6">
               <a
                 href="https://x.com/vistamurad?t=v1DvOASEPC_9vOzXKN-GGw&s=35"
+                target='_blank'
+                rel="noopener noreferrer"
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./dist/assets/images/xho.png"
+                  src="https://i.ibb.co/0jtxQZBw/xho.png"
                   alt="Twitter"
                   className="w-5 h-5 object-contain"
                 />
               </a>
               <a
-                href="#telegram"
+                href="https://t.me/+lov0IxvuySphMzgx"
+                target='_blank'
+                rel="noopener noreferrer"
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./dist/assets/images/telegramho.png"
+                  src="https://i.ibb.co/VYWbVGfq/telegramho.png"
                   alt="Telegram"
-                  className="w-5 h-5 object-contain"
-                />
-              </a>
-              <a
-                href="#discord"
-                className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <img
-                  src="./dist/assets/images/logoho.png" 
-                  alt="Discord"
                   className="w-5 h-5 object-contain"
                 />
               </a>
@@ -55,7 +49,7 @@ const Footer: React.FC = () => {
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./dist/assets/images/mail.png"
+                  src="https://i.ibb.co/NnpdyRZB/mail.png"
                   alt="Email"
                   className="w-5 h-5 object-contain"
                 />
@@ -91,11 +85,16 @@ const Footer: React.FC = () => {
                   Roadmap
                 </a>
               </li>
+              <li>
+                <a href="#whitepaper" className="text-pink-100 hover:text-pink-300 transition-colors">
+                  Whitepaper
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">Contract</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Contract Address</h3>
             <div className="bg-purple-800/50 p-4 rounded-lg border border-purple-600/30">
               <p className="text-pink-100 break-words">0x1234...ABCD</p>
               <button
@@ -121,10 +120,20 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#terms" className="text-pink-100 hover:text-pink-300 text-sm transition-colors">
+            <a
+              href="/src/Terms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-100 hover:text-pink-300 text-sm transition-colors"
+            >
               Terms
             </a>
-            <a href="#privacy" className="text-pink-100 hover:text-pink-300 text-sm transition-colors">
+            <a
+              href="/src/Privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-100 hover:text-pink-300 text-sm transition-colors"
+            >
               Privacy
             </a>
             <button

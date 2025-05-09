@@ -1,28 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Copy } from 'lucide-react';
 import Logo from './Logo';
+
+const CONTRACT_ADDRESS = '0x1234567890abcdef1234567890abcdef12345678'; // Substitua pelo endereço real
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Função para copiar para o clipboard
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (err) {
+      setCopied(false);
+    }
+  };
+
   const navLinks = [
     { name: 'Home', href: '#hero' },
+    { name: 'Whitepaper', href: '#whitepaper' },
     { name: 'Tokenomics', href: '#tokenomics' },
     { name: 'How to Buy', href: '#how-to-buy' },
+    { name: 'Chart', href: '#chart' },
+    { name: 'Roadmap', href: '#roadmap' },
     { name: 'Community', href: '#community' },
     { name: 'FAQ', href: '#faq' },
   ];
@@ -38,9 +50,9 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <Logo />
           </div>
-          
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -50,8 +62,23 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            {/* Contrato */}
+            <div className="flex items-center space-x-2 bg-purple-700/60 px-3 py-1 rounded-full select-all cursor-pointer transition hover:bg-purple-600"
+                 onClick={handleCopy}
+                 title="Copy contract address"
+            >
+              <span className="text-white font-mono text-xs">
+                {CONTRACT_ADDRESS.slice(0, 6)}...{CONTRACT_ADDRESS.slice(-4)}
+              </span>
+              <Copy size={16} className="text-pink-300" />
+              {copied && (
+                <span className="ml-2 text-green-300 text-xs font-semibold animate-pulse">
+                  Copied!
+                </span>
+              )}
+            </div>
           </div>
-          
+
           {/* Desktop Buy Now Button */}
           <div className="hidden md:flex">
             <a
@@ -63,7 +90,7 @@ const Navbar: React.FC = () => {
               Buy Now
             </a>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -75,7 +102,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-purple-900/95 backdrop-blur-md">
@@ -90,6 +117,22 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            {/* Contrato - Mobile */}
+            <div
+              className="flex items-center space-x-2 bg-purple-700/60 px-3 py-2 rounded-full select-all cursor-pointer mt-2 transition hover:bg-purple-600"
+              onClick={handleCopy}
+              title="Copy contract address"
+            >
+              <span className="text-white font-mono text-xs">
+                {CONTRACT_ADDRESS.slice(0, 6)}...{CONTRACT_ADDRESS.slice(-4)}
+              </span>
+              <Copy size={16} className="text-pink-300" />
+              {copied && (
+                <span className="ml-2 text-green-300 text-xs font-semibold animate-pulse">
+                  Copied!
+                </span>
+              )}
+            </div>
             {/* Mobile Buy Now Button */}
             <a
               href="https://ethervista.app/"

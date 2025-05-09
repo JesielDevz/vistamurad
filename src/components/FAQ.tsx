@@ -37,15 +37,15 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: 'What is VISTAMURAD?',
-      answer: 'VISTAMURAD is a community-driven, decentralized cryptocurrency built on the Ethereum blockchain. It combines the fun and viral nature of meme coins with innovative tokenomics and utility features designed to create lasting value for our community.',
+      answer: 'VISTAMURAD is a community-driven, decentralized cryptocurrency built on the Binance blockchain. It combines the fun and viral nature of meme coins with innovative tokenomics and utility features designed to create lasting value for our community.',
     },
     {
   question: 'How can I buy VISTAMURAD?',
-  answer: 'You can buy VISTAMURAD by setting up a crypto wallet like MetaMask, purchasing ETH from an exchange, and then swapping ETH for VISTAMURAD on Etherfun, which is available through the decentralized exchange Ethervista. For detailed instructions, check out our "How to Buy" section.',
+  answer: 'You can buy VISTAMURAD by setting up a crypto wallet like MetaMask, purchasing BNB from an exchange, and then swapping BNB for VISTAMURAD on Ethervista, decentralized exchange. For detailed instructions, check out our "How to Buy" section.',
     },
     {
       question: 'What makes VISTAMURAD different from other meme coins?',
-      answer: 'VISTAMURAD stands out due to its strong community focus, fair launch, zero taxes, and commitment to transparency. We also have a clear roadmap for development and utility implementation that goes beyond typical meme coins.',
+      answer: 'VISTAMURAD stands out due to its strong community focus, fair launch, almost zero taxes(around 1$), and commitment to transparency. We also have a clear roadmap for development and utility implementation that goes beyond typical meme coins.',
     },
     {
       question: 'Is VISTAMURAD safe to invest in?',
@@ -53,11 +53,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: 'What are the tokenomics of VISTAMURAD?',
-      answer: 'VISTAMURAD has a total supply of 1 billion tokens. 50% is allocated to the community, 30% to liquidity pools, 15% to the development fund, and 5% to the team with vesting periods. There are no buy or sell taxes.',
+      answer: 'VISTAMURAD has a total supply of 1 billion tokens. 70% is allocated to the community, 25% to liquidity pools, and 5% to the team with vesting periods (1 year locked). There are small buy and sell taxes (its around 1$).',
     },
     {
       question: 'How can I participate in the VISTAMURAD community?',
-      answer: 'You can join our active communities on Twitter, Telegram, and Discord. We encourage everyone to participate in discussions, share memes, and contribute ideas for the future development of VISTAMURAD.',
+      answer: 'You can join our active communities on X and Telegram. We encourage everyone to participate in discussions, share memes, and contribute ideas for the future development of VISTAMURAD.',
     },
   ];
 
@@ -93,7 +93,7 @@ const FAQ: React.FC = () => {
             href="#contact" 
             className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all duration-300 border border-white/30"
           >
-            Contact Us
+            Contact Us on X or Telegram.
           </a>
         </div>
       </div>

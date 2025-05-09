@@ -3,20 +3,18 @@ import React from 'react';
 const SocialCard: React.FC<{
   icon: React.ReactNode;
   title: string;
-  members: string;
   description: string;
   buttonText: string;
   buttonLink: string;
-}> = ({ icon, title, members, description, buttonText, buttonLink }) => {
+}> = ({ icon, title, description, buttonText, buttonLink }) => {
   return (
-    <div className="bg-purple-800/50 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+    <div className="bg-purple-800/50 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl max-w-xs w-full">
       <div className="flex items-center mb-4">
         <div className="h-12 w-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
           {icon}
         </div>
         <div>
           <h3 className="text-xl font-bold text-white">{title}</h3>
-          <p className="text-pink-300 font-semibold">{members}</p>
         </div>
       </div>
       <p className="text-pink-100 mb-6">{description}</p>
@@ -35,59 +33,31 @@ const Community: React.FC = () => {
     {
       icon: (
         <img
-          src="./src/images/xlogo.png"
+          src="https://i.ibb.co/FbcW0MxY/xlogo.png"
           alt="Official X"
           style={{ width: 45, height: 45, objectFit: 'contain' }}
         />
       ),
       title: 'Official X',
-      members: '15K+ Followers',
+
       description: 'Follow us for the latest updates, announcements, and memes from the VISTAMURAD community.',
       buttonText: 'Follow on X',
-      buttonLink: '#twitter',
+      buttonLink: 'https://x.com/vistamurad?t=v1DvOASEPC_9vOzXKN-GGw&s=35',
     },
     {
       icon: (
         <img
-          src="./src/images/telegram.png"
+          src="https://i.ibb.co/1txZLYjP/telegram.png"
           alt="Telegram"
           style={{ width: 45, height: 45, objectFit: 'contain' }}
         />
       ),
       title: 'Telegram',
-      members: '10K+ Members',
+
       description: 'Join our active Telegram group to chat with the community and stay updated in real-time.',
       buttonText: 'Join Telegram',
-      buttonLink: '#telegram',
-    },
-    {
-      icon: (
-        <img
-          src="./src/images/discord.png"
-          alt="Discord"
-          style={{ width: 45, height: 45, objectFit: 'contain' }}
-        />
-      ),
-      title: 'Discord',
-      members: '8K+ Members',
-      description: 'Connect with fellow VISTAMURAD holders, participate in events, and help shape our future.',
-      buttonText: 'Join Discord',
-      buttonLink: '#discord',
-    },
-    {
-      icon: (
-        <img
-          src="./src/images/medium.png"
-          alt="Medium"
-          style={{ width: 45, height: 45, borderRadius: '50%', objectFit: 'cover' }}
-        />
-      ),
-      title: 'Medium',
-      members: '5K+ Readers',
-      description: 'Read in-depth articles about VISTAMURAD developments, analysis, and future roadmap.',
-      buttonText: 'Read on Medium',
-      buttonLink: '#medium',
-    },
+      buttonLink: 'https://t.me/+lov0IxvuySphMzgx',
+    }
   ];
 
   return (
@@ -100,13 +70,13 @@ const Community: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards Centralization */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
           {socials.map((social, index) => (
             <SocialCard
               key={index}
               icon={social.icon}
               title={social.title}
-              members={social.members}
               description={social.description}
               buttonText={social.buttonText}
               buttonLink={social.buttonLink}

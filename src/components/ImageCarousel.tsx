@@ -7,17 +7,20 @@ import 'swiper/css/pagination';
 
 const ImageCarousel: React.FC = () => {
   const images = [
-    './dist/assets/carrossel/greens.jpg',
-    './dist/assets/carrossel/mill.jpg',
-    './dist/assets/carrossel/murads.jpg',
-    './dist/assets/carrossel/spx.jpg',
-    './dist/assets/carrossel/spxvista.jpg',
-    './dist/assets/carrossel/surprised.jpg',
-    './dist/assets/carrossel/vistabuy.jpg',
+    'https://i.ibb.co/jPYpNSZW/greens.jpg',
+    'https://i.ibb.co/2LNJd7H/mill.jpg',
+    'https://i.ibb.co/mFbFx35f/murads.jpg',
+    'https://i.ibb.co/RksxtSZH/spx.jpg',
+    'https://i.ibb.co/BHMv6BCP/spxvista.jpg',
+    'https://i.ibb.co/hFbZfpbk/surprised.jpg',
+    'https://i.ibb.co/pNvM6Yz/vistabuy.jpg',
   ];
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 my-16">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+        Arts and memes created by the community, create yours too!
+      </h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
@@ -29,11 +32,11 @@ const ImageCarousel: React.FC = () => {
         className="rounded-2xl overflow-hidden shadow-xl"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="flex justify-center items-center">
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[500px] sm:h-[300px] md:h-[400px] object-cover"
+              className="w-full h-auto max-h-[70vh] object-contain block"
             />
           </SwiperSlide>
         ))}

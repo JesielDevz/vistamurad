@@ -33,7 +33,14 @@ const Hero: React.FC = () => {
                 target="_blank"
                 className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 border border-white/30 flex items-center justify-center gap-2 text-center"
               >
-                Join Community <ArrowRight size={16} />
+                Join on X <ArrowRight size={16} />
+              </a>
+              <a
+                href="https://t.me/+lov0IxvuySphMzgx"
+                target="_blank"
+                className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 border border-white/30 flex items-center justify-center gap-2 text-center"
+              >
+                Join Telegram <ArrowRight size={16} />
               </a>
             </div>
           </div>
@@ -43,7 +50,7 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <div className="text-white text-7xl md:text-8xl font-extrabold">
                   <img
-                    src="../dist/assets/images/logo.png"
+                    src="https://i.ibb.co/1JKmJSNz/logo.jpg"
                     alt="Logo VISTAMURAD"
                     className="mx-auto w-45 h-45 object-contain rounded-full"
                   />

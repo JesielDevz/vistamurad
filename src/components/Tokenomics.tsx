@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Coins, Shield, Rocket } from 'lucide-react';
+import { PieChart, Coins, Rocket } from 'lucide-react';
 
 const TokenomicsCard: React.FC<{
   icon: React.ReactNode;
@@ -8,7 +8,7 @@ const TokenomicsCard: React.FC<{
   percentage: string;
 }> = ({ icon, title, description, percentage }) => {
   return (
-    <div className="bg-purple-800/50 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+    <div className="bg-purple-800/50 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl max-w-xs w-full">
       <div className="flex items-center mb-4">
         <div className="h-12 w-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
           {icon}
@@ -28,20 +28,14 @@ const Tokenomics: React.FC = () => {
     {
       icon: <PieChart className="text-white" size={24} />,
       title: 'Community Allocation',
-      percentage: '50%',
-      description: 'Half of all tokens are distributed to the community through fair launch and rewards.',
+      percentage: '70%',
+      description: '70% of all tokens are distributed to the community through fair launch and rewards.',
     },
     {
       icon: <Coins className="text-white" size={24} />,
       title: 'Liquidity Pool',
-      percentage: '30%',
+      percentage: '25%',
       description: 'Locked liquidity to ensure stable trading and long-term sustainability.',
-    },
-    {
-      icon: <Shield className="text-white" size={24} />,
-      title: 'Development Fund',
-      percentage: '15%',
-      description: 'Reserved for future development, marketing, and ecosystem growth.',
     },
     {
       icon: <Rocket className="text-white" size={24} />,
@@ -61,7 +55,8 @@ const Tokenomics: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grid centralizado e responsivo */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {tokenomicsData.map((item, index) => (
             <TokenomicsCard
               key={index}
@@ -75,18 +70,18 @@ const Tokenomics: React.FC = () => {
 
         <div className="mt-16 bg-purple-800/30 backdrop-blur-md rounded-3xl p-8 border border-purple-600/30">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Token Details</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
             {[
               { label: 'Token Name', value: 'VISTAMURAD' },
               { label: 'Token Symbol', value: 'VMURAD' },
               { label: 'Total Supply', value: '1,000,000,000 VMURAD' },
-              { label: 'Blockchain', value: 'Ethereum' },
-              { label: 'Tax', value: '0% Buy / 0% Sell' },
+              { label: 'Blockchain', value: 'BNB Smart Chain' },
+              { label: 'Tax', value: 'cheaper, around 1$' },
               { label: 'Launch Date', value: 'May 2025' },
             ].map((detail, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center w-full">
                 <p className="text-pink-300 mb-1">{detail.label}</p>
-                <p className="text-white font-semibold">{detail.value}</p>
+                <p className="text-white font-semibold break-words">{detail.value}</p>
               </div>
             ))}
           </div>

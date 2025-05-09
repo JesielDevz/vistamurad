@@ -9,11 +9,13 @@ import Community from './components/Community';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import './globals.css';
+import Whitepaper from './components/Whitepaper';
+import Roadmap from './components/Roadmap';
 
 function App() {
   // Update page title
   React.useEffect(() => {
-    document.title = 'VISTAMURAD | Decentralized Meme Coin';
+    document.title = 'VISTAMURAD ®';
   }, []);
 
   return (
@@ -21,10 +23,12 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Whitepaper />
         <ImageCarousel />
         <Tokenomics />
         <HowToBuy />
         <Chart />
+        <Roadmap />
         <Community />
         <FAQ />
       </main>
