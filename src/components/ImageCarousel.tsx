@@ -7,9 +7,13 @@ import 'swiper/css/pagination';
 
 const ImageCarousel: React.FC = () => {
   const images = [
-    './src/images/cybervmurad.jpg',
-    'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    './dist/assets/carrossel/greens.jpg',
+    './dist/assets/carrossel/mill.jpg',
+    './dist/assets/carrossel/murads.jpg',
+    './dist/assets/carrossel/spx.jpg',
+    './dist/assets/carrossel/spxvista.jpg',
+    './dist/assets/carrossel/surprised.jpg',
+    './dist/assets/carrossel/vistabuy.jpg',
   ];
 
   return (

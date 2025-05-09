@@ -21,11 +21,11 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4 mt-6">
               <a
-                href="#twitter"
+                href="https://x.com/vistamurad?t=v1DvOASEPC_9vOzXKN-GGw&s=35"
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./src/images/xho.png"
+                  src="./dist/assets/images/xho.png"
                   alt="Twitter"
                   className="w-5 h-5 object-contain"
                 />
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./src/images/telegramho.png" // Caminho da imagem do Telegram
+                  src="./dist/assets/images/telegramho.png"
                   alt="Telegram"
                   className="w-5 h-5 object-contain"
                 />
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./src/images/logoho.png" // Caminho da imagem do Discord
+                  src="./dist/assets/images/logoho.png" 
                   alt="Discord"
                   className="w-5 h-5 object-contain"
                 />
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 className="h-10 w-10 bg-purple-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
               >
                 <img
-                  src="./src/images/mail.png" // Caminho da imagem do Email
+                  src="./dist/assets/images/mail.png"
                   alt="Email"
                   className="w-5 h-5 object-contain"
                 />

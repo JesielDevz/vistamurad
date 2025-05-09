@@ -5,7 +5,7 @@ const Logo: React.FC = () => {
     <div className="flex items-center space-x-2">
       <div className="bg-gradient-to-r from-pink-0 to-purple-600 w-10 h-10 rounded-full flex items-center justify-center">
   <img 
-    src="./src/images/logo.jpg"
+    src="./dist/assets/images/logo.jpg"
     alt="Logo"
     className="w-10 h-10 object-contain"
   />
