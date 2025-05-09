@@ -1,5 +1,5 @@
 import React from 'react';
-import Metamask3DFox from './components/Metamask3DFox'
+/*import Metamask3DFox from './components/Metamask3DFox'*/
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ImageCarousel from './components/ImageCarousel';
@@ -21,7 +21,6 @@ function App() {
     <div className="min-h-screen bg-purple-950">
       <Navbar />
       <main>
-        <Metamask3DFox />
         <Hero />
         <ImageCarousel />
         <Tokenomics />
