@@ -8,6 +8,7 @@ type Milestone = {
   description: string;
 };
 
+
 const roadmap: Milestone[] = [
   // 2025
   {
@@ -174,34 +175,36 @@ const roadmap: Milestone[] = [
 ];
 
 const Roadmap: React.FC = () => (
-  <section id="roadmap" className="max-w-4xl mx-auto px-4 py-12">
-    <h1 className="text-4xl font-bold mb-8 text-center text-white">5-Year Roadmap</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <section id="roadmap" className="max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto px-2 sm:px-4 py-8 sm:py-12">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-white">
+      5-Year Roadmap
+    </h1>
+    <div className="grid grid-cols-1 gap-4 sm:gap-6">
       {roadmap.map((milestone, idx) => (
         <div
           key={idx}
-          className={`flex items-start space-x-4 bg-purple-800/40 rounded-xl p-4 shadow transition ${
+          className={`flex items-start gap-3 sm:gap-4 bg-purple-800/40 rounded-lg sm:rounded-xl p-3 sm:p-4 shadow transition ${
             milestone.completed ? "opacity-80" : ""
           }`}
         >
-          <div className="mt-1">
+          <div className="mt-1 flex-shrink-0">
             {milestone.completed ? (
-              <CheckCircle className="text-green-400" size={28} />
+              <CheckCircle className="text-green-400" size={22} />
             ) : (
-              <Circle className="text-pink-300" size={28} />
+              <Circle className="text-pink-300" size={22} />
             )}
           </div>
           <div>
-            <div className="flex items-center space-x-2">
-              <h2 className="text-lg font-semibold text-white">{milestone.title}</h2>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <h2 className="text-base sm:text-lg font-semibold text-white">{milestone.title}</h2>
               <span className="text-xs text-pink-200">{milestone.date}</span>
               {milestone.completed && (
-                <span className="ml-2 px-2 py-0.5 bg-green-500/20 text-green-300 text-xs rounded">
+                <span className="px-2 py-0.5 bg-green-500/20 text-green-300 text-xs rounded">
                   Completed
                 </span>
               )}
             </div>
-            <p className="text-pink-100 mt-1">{milestone.description}</p>
+            <p className="text-pink-100 mt-1 text-sm sm:text-base">{milestone.description}</p>
           </div>
         </div>
       ))}

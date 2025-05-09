@@ -1,16 +1,17 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Hero from './pages/Hero';
 import ImageCarousel from './components/ImageCarousel';
-import Tokenomics from './components/Tokenomics';
-import HowToBuy from './components/HowToBuy';
-import Chart from './components/Chart';
-import Community from './components/Community';
-import FAQ from './components/FAQ';
+import Tokenomics from './pages/Tokenomics';
+import HowToBuy from './pages/HowToBuy';
+import Chart from './pages/Chart';
+import Community from './pages/Community';
+import FAQ from './pages/FAQ';
 import Footer from './components/Footer';
-import './globals.css';
-import Whitepaper from './components/Whitepaper';
-import Roadmap from './components/Roadmap';
+import './index.css';
+import Whitepaper from './pages/Whitepaper';
+import Roadmap from './pages/Roadmap';
+import { ThemeProvider } from './contexts/ThemeContext'; 
 
 function App() {
   // Update page title
@@ -19,21 +20,23 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-purple-950">
-      <Navbar />
-      <main>
-        <Hero />
-        <Whitepaper />
-        <ImageCarousel />
-        <Tokenomics />
-        <HowToBuy />
-        <Chart />
-        <Roadmap />
-        <Community />
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col bg-purple-950">
+        <Navbar />
+        <main className="flex-1 px-2 sm:px-4 md:px-8">
+          <Hero />
+          <Whitepaper />
+          <ImageCarousel />
+          <Tokenomics />
+          <HowToBuy />
+          <Chart />
+          <Roadmap />
+          <Community />
+          <FAQ />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -12,20 +12,20 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
   return (
     <div className="border-b border-purple-700/50 last:border-0">
       <button
-        className="w-full py-6 flex justify-between items-center text-left focus:outline-none"
+        className="w-full py-4 sm:py-6 flex justify-between items-center text-left focus:outline-none"
         onClick={onClick}
       >
-        <h3 className="text-lg md:text-xl font-bold text-white">{question}</h3>
-        <span className="ml-4 flex-shrink-0">
-          {isOpen ? <ChevronUp className="text-pink-400" /> : <ChevronDown className="text-pink-400" />}
+        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white">{question}</h3>
+        <span className="ml-2 sm:ml-4 flex-shrink-0">
+          {isOpen ? <ChevronUp className="text-pink-400 w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronDown className="text-pink-400 w-5 h-5 sm:w-6 sm:h-6" />}
         </span>
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-96 opacity-100 pb-4 sm:pb-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-pink-100">{answer}</p>
+        <p className="text-pink-100 text-sm sm:text-base">{answer}</p>
       </div>
     </div>
   );
@@ -40,8 +40,8 @@ const FAQ: React.FC = () => {
       answer: 'VISTAMURAD is a community-driven, decentralized cryptocurrency built on the Binance blockchain. It combines the fun and viral nature of meme coins with innovative tokenomics and utility features designed to create lasting value for our community.',
     },
     {
-  question: 'How can I buy VISTAMURAD?',
-  answer: 'You can buy VISTAMURAD by setting up a crypto wallet like MetaMask, purchasing BNB from an exchange, and then swapping BNB for VISTAMURAD on Ethervista, decentralized exchange. For detailed instructions, check out our "How to Buy" section.',
+      question: 'How can I buy VISTAMURAD?',
+      answer: 'You can buy VISTAMURAD by setting up a crypto wallet like MetaMask, purchasing BNB from an exchange, and then swapping BNB for VISTAMURAD on Ethervista, decentralized exchange. For detailed instructions, check out our "How to Buy" section.',
     },
     {
       question: 'What makes VISTAMURAD different from other meme coins?',
@@ -66,16 +66,16 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-br from-purple-800 to-purple-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-          <p className="text-pink-200 max-w-2xl mx-auto">
+    <section id="faq" className="py-10 sm:py-20 bg-gradient-to-br from-purple-800 to-purple-900">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Frequently Asked Questions</h2>
+          <p className="text-pink-200 max-w-md sm:max-w-2xl mx-auto text-sm sm:text-base">
             Find answers to the most common questions about VISTAMURAD and join our community.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-purple-800/30 rounded-3xl backdrop-blur-sm p-6 md:p-8 border border-purple-600/30">
+        <div className="max-w-xl sm:max-w-3xl mx-auto bg-purple-800/30 rounded-2xl sm:rounded-3xl backdrop-blur-sm p-3 sm:p-6 md:p-8 border border-purple-600/30">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}
@@ -87,11 +87,11 @@ const FAQ: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-pink-200 mb-4">Still have questions?</p>
+        <div className="mt-8 sm:mt-12 text-center">
+          <p className="text-pink-200 mb-3 sm:mb-4 text-sm sm:text-base">Still have questions?</p>
           <a 
             href="#contact" 
-            className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all duration-300 border border-white/30"
+            className="inline-block px-5 py-2 sm:px-6 sm:py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all duration-300 border border-white/30 text-sm sm:text-base"
           >
             Contact Us on X or Telegram.
           </a>

@@ -2,32 +2,37 @@ import styled from "styled-components";
 
 const DexScreenerEmbed = styled.div`
   width: 100%;
-  padding: 5rem 1.5rem; /* margem interna */
+  padding: 1.5rem 0.5rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Mantém a proporção do gráfico */
-  aspect-ratio: 16 / 20;
+  /* Proporção vertical maior no mobile para melhor visualização */
+  aspect-ratio: 16 / 22;
 
   @media (min-width: 600px) {
     aspect-ratio: 16 / 10;
-    padding: 1.5rem 15rem;
+    padding: 1.5rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    aspect-ratio: 16 / 7;
+    padding: 1.5rem 8rem;
   }
 
   @media (min-width: 1400px) {
-    aspect-ratio: 16 / 7;
-    padding: 1.5rem 20rem ;
+    aspect-ratio: 16 / 6;
+    padding: 0.5rem 0.5rem;
   }
 
   iframe {
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 12px; /* opcional */
+    border-radius: 12px;
     background: transparent;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* opcional */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
 `;
 
@@ -35,13 +40,16 @@ const DEXSCREENER_URL =
   "https://dexscreener.com/ethereum/0xfdd05552F1377aA488AFed744c8024358AF02041?embed=1&loadChartSettings=0&trades=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=usd&interval=15";
 
 const DexScreenerChart = () => (
-  <div id="chart">
+  <div id="chart" style={{ width: "100%", maxWidth: 1200, margin: "0 auto" }}>
     <h2 style={{
       textAlign: "center",
       color: "#fff",
-      fontWeight: "bold",
-      fontSize: "1.5rem",
-      marginBottom: "1.5rem"
+      fontWeight: 700,
+      fontSize: "1.15rem",
+      marginBottom: "1rem",
+      lineHeight: 1.3,
+      padding: "0 0.5rem",
+      letterSpacing: 0.5,
     }}>
       Want to track your investment in real time?
     </h2>
